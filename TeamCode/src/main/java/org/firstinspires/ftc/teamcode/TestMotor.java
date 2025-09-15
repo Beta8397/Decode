@@ -11,11 +11,15 @@ public class TestMotor extends LinearOpMode {
 
     public void runOpMode(){
 
+        // Get a motor object
+
         motor = hardwareMap.get(DcMotorEx.class, "motor");
 
         waitForStart();
 
         while(opModeIsActive()){
+
+            // Check left joystick on gamepad 1
 
             double power = -gamepad1.left_stick_y;
 
